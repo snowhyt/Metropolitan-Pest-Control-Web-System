@@ -10,7 +10,8 @@ const employeeSchema = new mongoose.Schema({
     },
     email:{
         type:String,
-        required:true
+        required:true,
+        unique: true,
     },
     password:{
         type:String,
@@ -25,5 +26,13 @@ const employeeSchema = new mongoose.Schema({
         type:String,
         required:true
     },
- 
+    _createdAt: {
+        type: String,
+        required: true
+    },
+    _updatedAt: {
+        type: String,
+        required: true
+    },
+    _id:{}
 })
