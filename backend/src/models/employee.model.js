@@ -15,7 +15,8 @@ const employeeSchema = new mongoose.Schema({
     },
     password:{
         type:String,
-        required:true
+        required:true,
+        minlength: 6
     },
     role:{
         type:String,
@@ -24,15 +25,16 @@ const employeeSchema = new mongoose.Schema({
     },
     phone:{
         type:String,
-        required:true
-    },
-    _createdAt: {
-        type: String,
-        required: true
-    },
-    _updatedAt: {
-        type: String,
-        required: true
-    },
-    _id:{}
-})
+        required:true,
+        maxlength: 11,
+    }, 
+},
+{timestamps: true}
+
+);
+
+
+const Employee = mongoose.model("Employee", employeeSchema);
+
+export default Employee;
+
