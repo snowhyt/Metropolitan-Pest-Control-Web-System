@@ -1,111 +1,35 @@
 import React from 'react'
+import {Routes, Route} from 'react-router-dom';
+
+import Navbar from './components/navbar.jsx';
+import Carousel from './components/carousel.jsx'; 
+import HomePage from './pages/HomePage.jsx';
+import AboutPage from './pages/AboutPage.jsx';
+import ServicePage from './pages/ServicePage.jsx';
+import ContactPage from './pages/ContactPage.jsx';
+import ClientLoginPage from './pages/ClientLoginPage.jsx';
+import EmployeeLoginPage from './pages/EmployeeLoginPage.jsx';
+
 
 function App() {
   return (
-    <div className="navbar bg-base-100 shadow-sm">
-  <div className="navbar-start">
-    <div className="dropdown">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-      </div>
-      <ul
-        tabIndex={0}
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
-      </ul>
+    <div>
+
+    <Navbar/>
+    
+         <Routes>
+         {/* <Route index element={<HomePage />} /> Default route */}
+          <Route path='/homepage' element={<HomePage/>} />
+          <Route path='/about-us' element={<AboutPage/>} />
+          <Route path='/services' element={<ServicePage/>} />
+          <Route path='/contact' element={<ContactPage/>} />
+          <Route path='/client-login' element={<ClientLoginPage/>} />
+          <Route path='/employee-login' element={<EmployeeLoginPage/>} />
+         </Routes>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
-  </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
-    </ul>
-  </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
-  </div>
-</div>
   )
 }
 
 export default App;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App
