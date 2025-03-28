@@ -1,5 +1,7 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom';
+import "cally";
+
 
 import Navbar from './components/navbar.jsx';
 import Carousel from './components/carousel.jsx'; 
@@ -9,6 +11,8 @@ import ServicePage from './pages/ServicePage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import ClientLoginPage from './pages/ClientLoginPage.jsx';
 import EmployeeLoginPage from './pages/EmployeeLoginPage.jsx';
+
+
 
 
 function App() {
