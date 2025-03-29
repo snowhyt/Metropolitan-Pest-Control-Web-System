@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 
 
 const employeeSchema = new mongoose.Schema({
-    name:{
+    fullname:{
         type:String,
         required:true
     },
@@ -28,6 +28,10 @@ const employeeSchema = new mongoose.Schema({
         required:true,
         maxlength: 11,
     }, 
+
+    profilePic:{
+        type: String,
+    }
 },
 {timestamps: true}
 
