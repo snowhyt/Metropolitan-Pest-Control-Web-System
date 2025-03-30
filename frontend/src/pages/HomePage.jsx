@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "../components/carousel.jsx";
 function HomePage() {
   return (
+
     <div>
       <div className="bg-blue-400 pb-20 pt-20">
         <div className="text-center text-[50px] text-white font-bold font-sans">
@@ -39,6 +40,13 @@ function HomePage() {
           </div>
         </div>
       </div>
+
+    <div>HomePage
+
+{/* <Carousel/> */}
+
+
+
     </div>
   );
 }
