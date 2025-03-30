@@ -1,8 +1,22 @@
 import React from 'react'
-
+import Calendar from '../components/calendar.jsx'
 function AboutPage() {
   return (
-    <div>AboutPage</div>
+    <div>AboutPage
+
+
+
+    <Calendar/>
+   
+   
+   
+   
+    </div>
+
+   
+
+
+
   )
 }
 

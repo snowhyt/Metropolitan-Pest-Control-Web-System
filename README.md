@@ -10,6 +10,7 @@
     -npm install react-router-dom       //for paging and routing
     -npm install react-hot-toast        //for alert of notif features
     -npm install tailwindcss @tailwindcss/postcss postcss //add tailwind this is the latest script in the tailwind website *Just follow the installation in tailwind Documentation*
+    -npm install cally      //for calendar
 
     # Setup Backend
     -cd root folder
@@ -25,3 +26,14 @@
 
     -cd frontend
     -npm run dev (if error occurs, then "run npm install")
+
+
+
+
+
+## HTTP Status Codes
+      200 - ok
+      201 - created
+      400 - bad request
+      404 - not found
+      500 - internal server error

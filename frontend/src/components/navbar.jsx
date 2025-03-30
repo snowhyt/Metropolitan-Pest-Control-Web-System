@@ -4,7 +4,7 @@ function navbar() {
   return (
     <div>
 
-<div className="navbar bg-base-100 shadow-sm">
+<div className="navbar bg-red-500 shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,10 +39,11 @@ function navbar() {
       <li><a>Item 1</a></li>
       <li>
         <details>
-          <summary>Parent</summary>
+          <summary>About us</summary>
           <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><a>Company</a></li>
+            <li><a>Vision and Mission</a></li>
+            <li><a>FAQs</a></li>
           </ul>
         </details>
       </li>

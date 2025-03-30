@@ -23,6 +23,10 @@ const customerSchema = new mongoose.Schema(
             type: Number,
             required: true,
         },
+        gender:{
+           type: String,
+           required: true,
+        },
         address:{
             type: String,
             required: true,
@@ -42,6 +46,9 @@ const customerSchema = new mongoose.Schema(
             required: true,
             minlength: 6
         },
+        profilePic:{
+            type: String,
+        }
         
     },
     {timestamps: true}
