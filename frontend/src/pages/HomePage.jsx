@@ -11,4 +11,7 @@ function HomePage() {
   )
 }
 
+
+// wala na akong pera
+
 export default HomePage
