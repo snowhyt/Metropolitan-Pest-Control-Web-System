@@ -9,6 +9,20 @@ export const Signup = async (req, res) => {
 
     const {fullname, email, password, role, phone, profilePic} = req.body;
  try {
+
+    //check if fields have data
+    if(!fullname || !email || !password || !role || !phone){
+        return res.status(400).json({message: "All fields are required"});
+    }
+    if(role !== "admin" && role !== "staff"){
+        return res.status(400).json({message: "Role must be either admin or staff"});
+    }
+
+    //phone number only 11 digits
+    if(phone.length !== 11){
+        return res.status(400).json({message:"Phone must be eleven digits"});
+    }
+    
     //checking password length
     if(password.length < 6){ 
         return res.status(400).json({message: "Password must be atleast 6 characters"});
