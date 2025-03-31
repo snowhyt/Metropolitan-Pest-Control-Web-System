@@ -17,6 +17,7 @@
     -npm init -y (json package file)
     -npm install express dotenv mongoose bcryptjs cloudinary cookie-parser jsonwebtoken socket.io
     -npm install nodemon -D
+    -npm install multer //for handling file uploads
 
 
 
