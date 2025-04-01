@@ -25,7 +25,6 @@ export const Signup = async (req, res) => {
     }
 
 
-
     //checking password length
     if(password.length < 6){ 
         return res.status(400).json({message: "Password must be atleast 6 characters"});
@@ -41,7 +40,7 @@ export const Signup = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, salt);
 
     //for new employee
-   const newEmployee = new employee(
+   const newEmployee = new Employee(
         {
             fullname,
             email,
