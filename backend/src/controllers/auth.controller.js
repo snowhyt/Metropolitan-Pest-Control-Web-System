@@ -13,7 +13,7 @@ export const Signup = async (req, res) => {
     if(password.length < 6){ 
         return res.status(400).json({message: "Password must be atleast 6 characters"});
     }
-    //find if user exist for duplication isues
+    //find if user exist for duplication issues
     const employee = await Employee.findOne({email});
     if(employee){
         return res.status(400).json({message: "employee already exists"});
