@@ -22,15 +22,53 @@ function Navbar() {
             </svg>
           </div>
           <ul className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-            <li><a>Home</a></li>
             <li>
-              <a>Parent</a>
+              <a>Home</a>
+            </li>
+            <li>
+              <a>About Us</a>
               <ul className="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
+                <li>
+                  <a>Our Company</a>
+                </li>
+                <li>
+                  <a>Vision & Mission</a>
+                </li>
+                <li>
+                  <a>FAQs</a>
+                </li>
+              </ul>
+              <a>Services</a>
+              <ul className="p-2">
+                <li>
+                  <a>Our Services</a>
+                </li>
+                <li>
+                  <a>Testimonials</a>
+                </li>
+              </ul>
+              <a>Contact Us</a>
+              <ul className="p-2">
+                <li>
+                  <a>Service Area Locator</a>
+                </li>
+                <li>
+                  <a>Request Booking</a>
+                </li>
+                <li>
+                  <a>Contact Us</a>
+                </li>
+              </ul>
+              <a>Login</a>
+              <ul className="p-2">
+                <li>
+                  <a>Login</a>
+                </li>
+                <li>
+                  <a>Client Login</a>
+                </li>
               </ul>
             </li>
-            <li><a>Item 3</a></li>
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">
@@ -40,14 +78,22 @@ function Navbar() {
 
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><a>Home</a></li>
+          <li>
+            <a>Home</a>
+          </li>
           <li>
             <details>
               <summary>About Us</summary>
               <ul className="p-2">
-                <li><a>Our Company</a></li>
-                <li><a>Vision & Mission</a></li>
-                <li><a>FAQs</a></li>
+                <li>
+                  <a>Our Company</a>
+                </li>
+                <li>
+                  <a>Vision & Mission</a>
+                </li>
+                <li>
+                  <a>FAQs</a>
+                </li>
               </ul>
             </details>
           </li>
@@ -55,8 +101,12 @@ function Navbar() {
             <details>
               <summary>Services</summary>
               <ul className="p-2">
-                <li><a>Our Services</a></li>
-                <li><a>Testimonials</a></li>
+                <li>
+                  <a>Our Services</a>
+                </li>
+                <li>
+                  <a>Testimonials</a>
+                </li>
               </ul>
             </details>
           </li>
@@ -64,9 +114,15 @@ function Navbar() {
             <details>
               <summary>Contact Us</summary>
               <ul className="p-2">
-                <li><a>Service Area Locator</a></li>
-                <li><a>Request Booking</a></li>
-                <li><a>Contact Us</a></li>
+                <li>
+                  <a>Service Area Locator</a>
+                </li>
+                <li>
+                  <a>Request Booking</a>
+                </li>
+                <li>
+                  <a>Contact Us</a>
+                </li>
               </ul>
             </details>
           </li>
@@ -74,7 +130,9 @@ function Navbar() {
             <details>
               <summary>Client Login</summary>
               <ul className="p-2">
-                <li><a>Client Portal</a></li>
+                <li>
+                  <a>Client Portal</a>
+                </li>
               </ul>
             </details>
           </li>
