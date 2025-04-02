@@ -1,8 +1,13 @@
 import React from "react";
-import Carousel from "../components/carousel.jsx";
+import Navbar from "../components/navbar.jsx";
 function HomePage() {
   return (
+    
     <div>
+        
+
+        <Navbar/>
+
       <div className="bg-blue-400 pb-20 pt-20">
         <div className="text-center text-[50px] text-white font-bold font-sans">
           <h1>Getting Rid of Pest since 1992</h1>
@@ -25,7 +30,7 @@ function HomePage() {
         </div>
         <div className="flex flex-col md:flex-row mx-5 md:mx-10 lg:mx-20 gap-10">
           <div className=" text-center border-gray-300 p-8 rounded-lg flex-1">
-            <p className="text-gray-700 leading-relaxed text-sm md:text-base lg:text-lg">
+            <p className="text-gray-700 leading-relaxed text-sm md:text-base lg:text-lg text-left">
               Metropolitan Pest Control Corporation utilizes state-of-the-art
               equipment and the latest technology in the industry. We use only
               FDA-approved insecticides and chemicals to ensure responsible
@@ -44,9 +49,11 @@ function HomePage() {
               customer satisfaction, we're always striving to meet and exceed
               industry expectations.
             </p>
-            <a className="btn bg-blue-400 text-white pt-2 rounded-md mt-6 inline-block hover:bg-blue-500 transition duration-300">
+            <div className="flex flex-start">
+            <a className="btn  bg-blue-400 text-white pt-2 rounded-md mt-15 px-10 inline-block  hover:bg-blue-500 transition duration-300">
               Learn More
             </a>
+            </div>
           </div>
           <div className=" border-gray-300 rounded-lg mx-5 md:mx-10 flex flex-col items-center">
             <img src="/logo.png" alt="Company Image" className="w-50 h-20" />
