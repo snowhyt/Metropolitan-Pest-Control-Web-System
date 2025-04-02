@@ -15,6 +15,7 @@ export const Signup = async (req, res) => {
     if(!fullname || !email || !password || !role || !phone){
         return res.status(400).json({message: "All fields are required"});
     }
+    //accepts admin and staff only
     if(role !== "admin" && role !== "staff"){
         return res.status(400).json({message: "Role must be either admin or staff"});
     }
@@ -23,13 +24,12 @@ export const Signup = async (req, res) => {
     if(phone.length !== 11){
         return res.status(400).json({message:"Phone must be eleven digits"});
     }
-
-
+    
     //checking password length
     if(password.length < 6){ 
         return res.status(400).json({message: "Password must be atleast 6 characters"});
     }
-    //find if user exist for duplication issues
+    //find if user exist for duplication isues
     const employee = await Employee.findOne({email});
     if(employee){
         return res.status(400).json({message: "employee already exists"});
@@ -40,7 +40,7 @@ export const Signup = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, salt);
 
     //for new employee
-   const newEmployee = new Employee(
+   const newEmployee = new employee(
         {
             fullname,
             email,
@@ -60,6 +60,7 @@ export const Signup = async (req, res) => {
         
         return res.status(201).json({
             _id: newEmployee._id,
+            emp_Id: newEmployee.emp_Id,
             fullname: newEmployee.fullname,
             email:newEmployee.email,
             role: newEmployee.role,
@@ -81,7 +82,7 @@ export const Signup = async (req, res) => {
 
 
 export const Login = (req, res) => {
-    res.send("Login Route");
+   res.send("Login Route");
    };
 
 
