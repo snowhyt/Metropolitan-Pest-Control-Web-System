@@ -40,7 +40,7 @@ export const Signup = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, salt);
 
     //for new employee
-   const newEmployee = new employee(
+   const newEmployee = new Employee(
         {
             fullname,
             email,
