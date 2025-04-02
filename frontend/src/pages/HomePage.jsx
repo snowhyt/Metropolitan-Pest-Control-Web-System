@@ -70,10 +70,10 @@ function HomePage() {
               <div className="flex justify-baseline ml-5">Text here</div>
             </div>
             <div className="h-105 w-80 bg-blue-300 text-center rounded-lg">
-              Box
+              box
             </div>
             <div className="h-105 w-80 bg-blue-300 text-center rounded-lg">
-              Box
+              box
             </div>
           </div>
         </div>
