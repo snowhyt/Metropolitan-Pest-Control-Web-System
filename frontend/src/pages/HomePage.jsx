@@ -20,7 +20,7 @@ function HomePage() {
         </div>
       </div>
       <div>
-        <div className="text-center text-[30px] text-white-400 mt-5 font-bold font-mono mb-10">
+        <div className="text-center text-[30px] text-white-400 mt-10 font-bold font-mono mb-10">
           <h1>METROPOLITAN PEST CONTROL CORPORATION®</h1>
         </div>
         <div className="flex flex-col md:flex-row mx-5 md:mx-10 lg:mx-20 gap-10">
@@ -51,6 +51,30 @@ function HomePage() {
           <div className=" border-gray-300 rounded-lg mx-5 md:mx-10 flex flex-col items-center">
             <img src="/logo.png" alt="Company Image" className="w-50 h-20" />
             <img src="/image.jpg" alt="image" className="w-100 h-90 border-2" />
+          </div>
+        </div>
+        <div>
+          <h1 className="text-center text-[30px] text-white-400 mt-20 font-bold font-mono mb-5">
+            Service
+          </h1>
+          {/* delete h-200*/}
+          <div className="flex flex-col md:flex-row justify-center items-center md:space-x-30 h-200 space-y-10 md:space-y-0 mt-10">
+            <div className="h-105 w-80 bg-blue-300 text-center rounded-lg">
+              <div className="flex justify-center">
+                <img
+                  src="/dengue.jpg"
+                  alt="dengueservice"
+                  className="w-60 h-50 mt-5"
+                />
+              </div>
+              <div className="flex justify-baseline ml-5">Text here</div>
+            </div>
+            <div className="h-105 w-80 bg-blue-300 text-center rounded-lg">
+              Box
+            </div>
+            <div className="h-105 w-80 bg-blue-300 text-center rounded-lg">
+              Box
+            </div>
           </div>
         </div>
       </div>
