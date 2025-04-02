@@ -57,23 +57,89 @@ function HomePage() {
           <h1 className="text-center text-[30px] text-white-400 mt-20 font-bold font-mono mb-5">
             Service
           </h1>
-          {/* delete h-200*/}
-          <div className="flex flex-col md:flex-row justify-center items-center md:space-x-30 h-200 space-y-10 md:space-y-0 mt-10">
-            <div className="h-105 w-80 bg-blue-300 text-center rounded-lg">
-              <div className="flex justify-center">
-                <img
-                  src="/dengue.jpg"
-                  alt="dengueservice"
-                  className="w-60 h-50 mt-5"
-                />
+          <div>
+            <p className="flex justify-center items-center text-center text-white w-full px-4 md:px-6 lg:px-10">
+              Following is the complete list of quality services that are
+              designed to suit the requirements of MPCC's valued clients:
+              afafafafaf Following is the complete list of quality services that
+              are designed to suit the requirements of MPCC's valued clients: af
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 justify-center items-center mt-10 px-4 md:px-6 lg:px-10">
+              <div className="bg-gray-500 rounded-full w-40 h-40 flex items-center justify-center">
+                services
               </div>
-              <div className="flex justify-baseline ml-5">Text here</div>
+              <div className="bg-gray-500 rounded-full w-40 h-40 flex items-center justify-center">
+                services
+              </div>
+              <div className="bg-gray-500 rounded-full w-40 h-40 flex items-center justify-center">
+                services
+              </div>
+              <div className="bg-gray-500 rounded-full w-40 h-40 flex items-center justify-center">
+                services
+              </div>
+              <div className="bg-gray-500 rounded-full w-40 h-40 flex items-center justify-center">
+                services
+              </div>
             </div>
-            <div className="h-105 w-80 bg-blue-300 text-center rounded-lg">
-              box
-            </div>
-            <div className="h-105 w-80 bg-blue-300 text-center rounded-lg">
-              box
+          </div>
+
+          {/* delete h-200*/}
+          <div className="bg-gray-600 mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
+              <div className="h-auto bg-blue-300 text-center rounded-lg p-4">
+                <div className="flex justify-center">
+                  <img
+                    src="/dengue.jpg"
+                    alt="dengueservice"
+                    className="w-full md:w-80 h-auto mt-5"
+                  />
+                </div>
+                <div className="font-extrabold mt-2 text-black">
+                  Service Header 1
+                </div>
+                <div className="text-gray-500 text-left">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              </div>
+              <div className="h-auto bg-blue-300 text-center rounded-lg p-4">
+                <div className="flex justify-center">
+                  <img
+                    src="/dodent.jpg"
+                    alt="rat"
+                    className="w-full md:w-80 h-auto mt-5"
+                  />
+                </div>
+                <div className="font-extrabold mt-2 text-black">
+                  Service Header 2
+                </div>
+                <div className="text-gray-500 text-left">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              </div>
+              <div className="h-auto bg-blue-300 text-center rounded-lg p-4">
+                <div className="flex justify-center">
+                  <img
+                    src="/poopinpeace.jpg"
+                    alt="cockroach"
+                    className="w-full md:w-80 h-auto mt-5"
+                  />
+                </div>
+                <div className="font-extrabold mt-2 text-black">
+                  Service Header 3
+                </div>
+                <div className="text-gray-500 text-left">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+              </div>
             </div>
           </div>
         </div>
