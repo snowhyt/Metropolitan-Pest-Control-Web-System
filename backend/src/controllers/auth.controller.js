@@ -81,13 +81,57 @@ export const Signup = async (req, res) => {
 };
 
 
-export const Login = (req, res) => {
-   res.send("Login Route");
+export const Login = async (req, res) => {
+   const {emp_Id, password} = req.body;
+
+   try {
+    if(!emp_Id || !password){
+        return res.status(400).json({message: "All fields are required"});    
+   }
+   const employee = await Employee.findOne({emp_Id});
+   
+   if(!employee){
+    return res.status(400).json({message: "Employee does not exist"});
+   }
+
+   const isPasswordCorrect = await bcrypt.compare(password, employee.password);
+
+   if(!isPasswordCorrect){
+    return res.status(400).json({message: "Incorrect password"});
+    
+   }
+
+   generateToken(employee._id, res);
+   
+   res.status(200).json({
+    _id:employee._id,
+    fullname: employee.fullname,
+    emp_Id: employee.emp_Id,
+    email: employee.email,
+    role: employee.role,
+    phone: employee.phone,
+    profilePic: employee.profilePic,
+   })
+   } catch (error) {
+    console.log("Error in Login controller", error.message);
+    res.status(500).json({message: "Internal server error"});
+   }
+
    };
 
 
 
 export const Logout = (req, res) => {
-    res.send("Logout Route");
+    try {
+        res.cookie("jwt", "",{maxAge:0});
+        res.status(200).json({message: "Logged out successfully"});
+    } catch (error) {
+        console.log("Error in Logout controller", error.message);
+        res.status(500).json({message: "Internal server error"});
+        
+    }
    };
    
+export const updateProfile = (req, res) => {
+    res.send("Update Profile Route");
+   };
