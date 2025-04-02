@@ -1,9 +1,17 @@
 import express from "express";
 import mongoose from "mongoose";
+import {customAlphabet} from 'nanoid';
 
 
-
+const nanoid = customAlphabet('0123456789', 6);
 const employeeSchema = new mongoose.Schema({
+    emp_Id:{
+        type: String,
+        required: true,
+        unique: true,
+        default: () => `EMP-${nanoid()}`
+    },
+    
     fullname:{
         type:String,
         required:true
