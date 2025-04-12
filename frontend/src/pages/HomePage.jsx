@@ -1,8 +1,13 @@
 import React from "react";
-import Carousel from "../components/carousel.jsx";
+import Navbar from "../components/navbar.jsx";
 function HomePage() {
   return (
+    
     <div>
+        
+
+        <Navbar/>
+
       <div className="bg-blue-400 pb-20 pt-20">
         <div className="text-center text-[50px] text-white font-bold font-sans">
           <h1>Getting Rid of Pest since 1992</h1>
@@ -20,12 +25,12 @@ function HomePage() {
         </div>
       </div>
       <div>
-        <div className="text-center text-[30px] text-white-400 mt-5 font-bold font-mono mb-10">
+        <div className="text-center text-[30px] text-white-400 mt-10 font-bold font-mono mb-10">
           <h1>METROPOLITAN PEST CONTROL CORPORATION®</h1>
         </div>
         <div className="flex flex-col md:flex-row mx-5 md:mx-10 lg:mx-20 gap-10">
           <div className=" text-center border-gray-300 p-8 rounded-lg flex-1">
-            <p className="text-gray-700 leading-relaxed text-sm md:text-base lg:text-lg">
+            <p className="text-gray-700 leading-relaxed text-sm md:text-base lg:text-lg text-left">
               Metropolitan Pest Control Corporation utilizes state-of-the-art
               equipment and the latest technology in the industry. We use only
               FDA-approved insecticides and chemicals to ensure responsible
@@ -44,13 +49,39 @@ function HomePage() {
               customer satisfaction, we're always striving to meet and exceed
               industry expectations.
             </p>
-            <a className="btn bg-blue-400 text-white pt-2 rounded-md mt-6 inline-block hover:bg-blue-500 transition duration-300">
+            <div className="flex flex-start">
+            <a className="btn  bg-blue-400 text-white pt-2 rounded-md mt-15 px-10 inline-block  hover:bg-blue-500 transition duration-300">
               Learn More
             </a>
+            </div>
           </div>
           <div className=" border-gray-300 rounded-lg mx-5 md:mx-10 flex flex-col items-center">
             <img src="/logo.png" alt="Company Image" className="w-50 h-20" />
             <img src="/image.jpg" alt="image" className="w-100 h-90 border-2" />
+          </div>
+        </div>
+        <div>
+          <h1 className="text-center text-[30px] text-white-400 mt-20 font-bold font-mono mb-5">
+            Service
+          </h1>
+          {/* delete h-200*/}
+          <div className="flex flex-col md:flex-row justify-center items-center md:space-x-30 h-200 space-y-10 md:space-y-0 mt-10">
+            <div className="h-105 w-80 bg-blue-300 text-center rounded-lg">
+              <div className="flex justify-center">
+                <img
+                  src="/dengue.jpg"
+                  alt="dengueservice"
+                  className="w-60 h-50 mt-5"
+                />
+              </div>
+              <div className="flex justify-baseline ml-5">Text here</div>
+            </div>
+            <div className="h-105 w-80 bg-blue-300 text-center rounded-lg">
+              box
+            </div>
+            <div className="h-105 w-80 bg-blue-300 text-center rounded-lg">
+              box
+            </div>
           </div>
         </div>
       </div>

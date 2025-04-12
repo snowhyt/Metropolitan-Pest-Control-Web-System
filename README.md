@@ -18,6 +18,7 @@
     -npm install express dotenv mongoose bcryptjs cloudinary cookie-parser jsonwebtoken socket.io
     -npm install nodemon -D
     -npm install multer //for handling file uploads
+    -npm install nanoid //for auto random generate id
 
 
 

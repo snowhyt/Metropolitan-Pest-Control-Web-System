@@ -1,6 +1,6 @@
-import express, { Router } from 'express';
-
-import authRouter from './routes/auth.route.js';
+import express from 'express';
+import cookieParser from 'cookie-parser';
+import authRoutes from './routes/auth.route.js';
 import dotenv from 'dotenv';
 dotenv.config();
 import{ connectDB } from './libs/db.js';
@@ -13,7 +13,10 @@ const app = express();
 app.use(express.json());
 
 
-app.use("/api/auth", authRouter);
+//middleware
+app.use(cookieParser());
+
+app.use("/api/auth", authRoutes);
 
 
 
