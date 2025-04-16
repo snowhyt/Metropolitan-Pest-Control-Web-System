@@ -19,7 +19,7 @@ function App() {
   return (
     <div>
 
-    <Navbar/>
+    
     
          <Routes>
          {/* <Route index element={<HomePage />} /> Default route */}

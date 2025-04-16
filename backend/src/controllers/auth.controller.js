@@ -1,6 +1,8 @@
 import { generateToken } from "../libs/utils.js";
 import Employee from "../models/employee.model.js";
 import bcrypt from "bcryptjs";
+import cloudinary from "../libs/cloudinary.js";
+
 
 
 //signup controller
@@ -132,6 +134,49 @@ export const Logout = (req, res) => {
     }
    };
    
-export const updateProfile = (req, res) => {
-    res.send("Update Profile Route");
+export const updateProfile = async (req, res) => {
+    try {
+        const {profilePic} = req.body;
+        const employeeID = req.employee._id;
+
+
+        if(!profilePic){
+            return res.status(400).json({message: "Profile picture is required"});
+        }
+
+       const uploadResponse = await cloudinary.uploader.upload(profilePic);
+
+       const updatedEmployee = await Employee.findByIdAndUpdate(
+        employeeID, {profilePic: uploadResponse.secure_url}, {new: true}
+       );
+       res.status(200).json(updatedEmployee);
+    
+
+    } catch (error) {
+        console.log("Error in updateProfile controller", error.message);
+        res.status(500).json({message: "Internal server error"});
+    }
    };
+
+
+export const checkAuth = async (req, res) => {
+    try {
+        const employee = req.employee;
+
+        res.status(200).json({
+            message: "Auth is working",
+            employee: {
+                _id: employee._id,
+                emp_Id: employee.emp_Id,
+                fullname: employee.fullname,
+                email: employee.email,
+                role: employee.role,
+                phone: employee.phone,
+                profilePic: employee.profilePic,
+            },
+        });
+    } catch (error) {
+        console.log("Error in checkAuth controller", error.message);
+        res.status(500).json({message: "Internal server error"});
+    }
+    };
